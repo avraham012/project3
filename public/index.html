@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <title>Documentation API</title>
+</head>
+
+<body>
+
+  <header class="container-fluid ">
+    <div class="container">
+      <h1 class="py-3 text text-center">Documentation of my toys API</h1>
+    </div>
+  </header>
+  <main class="container-fluid">
+    <div class="container p-2">
+      <h4 class="py-3">Hello I'm Avraham Yosef Kallner and this Documentation of my
+          <span class="text-primary">toys API</span> I've written.</h4>
+      <section>
+        <div>
+          <h3><span class="text-primary">toys</span> Routes</h3>
+          <p>Get information about toys via a full API</p>
+        </div>
+        <table class="table table-striped table-responsive">
+          <thead>
+            <tr>
+              <th scope="col">Method</th>
+              <th scope="col">URL</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- get -->
+            <tr>
+              <td>Get</td>
+              <td><a href="/toys?page=1">/toys?page=number</a></td>
+              <td>Get a list of all the toys , present 10 results by page number</td>
+            </tr>
+            <tr>
+              <td>Get</td>
+              <td><a href="/toys?perPage=4">/toys?perPage=number</a></td>
+              <td>Get X animals in each page</td>
+            </tr>
+            <tr>
+              <td>Get</td>
+              <td><a href="/toys?reverse=yes">/toys?reverse=sort-key</a></td>
+              <td>Reverse by sort key: yes/no</td>
+            </tr>
+            <tr>
+              <td>Get</td>
+              <td><a href="/toys?sort=price">/toys?sort=key-word</a></td>
+              <td>From which value to sort by</td>
+            </tr>
+            <tr>
+              <td>Get</td>
+              <td><a href="/toys/prices?min=50&max=300">/toys/price?min=number&max=number</a></td>
+              <td>Price range</td>
+            </tr>
+            <tr>
+              <td>Get</td>
+              <td><a href="/toys/category/birds">/toys/category/:category-name</a></td>
+              <td>Get all animals from the same category</td>
+            </tr>
+            <tr>
+              <td>Get</td>
+              <td><a href="/toys/search?s=cat">/toys/search?s=keyword</a></td>
+              <td>Search products by name or info</td>
+            </tr>
+            <!-- get -->
+          </tbody>
+        </table>
+        <div>
+          <h3><span class="text-primary">toys</span> Actions</h3>
+          <p>Add, remove and edit allowed only for registered users</p>
+        </div>
+        <table class="table table-striped table-responsive">
+          <thead>
+            <tr>
+              <th scope="col">Method</th>
+              <th scope="col">URL</th>
+              <th scope="col">Body</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Post</td>
+              <td><a href="#">/toys</a></td>
+              <td>
+                <ol>
+                  <li>name <span class="text-primary">(required)</span></li>
+                  <li>info <span class="text-primary">(required)</span></li>
+                  <li>category <span class="text-primary">(required)</span></li>
+                  <li>img_url</li>
+                  <li>price <span class="text-primary">(required)</span></li>
+                </ol>
+              </td>
+              <td>Add a new toy <strong>Must to be connected</strong></td>
+            </tr>
+            <tr>
+              <td>Edit</td>
+              <td><a href="#">/toys/:id-key</a></td>
+              <td>
+                <ol>
+                  <li>name <span class="text-primary">(required)</span></li>
+                  <li>info <span class="text-primary">(required)</span></li>
+                  <li>category <span class="text-primary">(required)</span></li>
+                  <li>img_url</li>
+                  <li>price <span class="text-primary">(required)</span></li>
+                </ol>
+              </td>
+              <td>Edit a new toy <strong>Must to be connected</strong></td>
+            </tr>
+            <tr>
+              <td>Delete</td>
+              <td><a href="#">/toys/:id-key</a></td>
+              <td>
+              </td>
+              <td>Delete a new toy <strong>Must to be connected</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <!-- try to refresh bugs -->
+      <section>
+        <div>
+          <h3><span class="text-primary">Users</span> Actions</h3>
+          <p>To Login action you must first register</p>
+        </div>
+        <table class="table table-striped table-responsive">
+          <thead>
+            <tr>
+              <th scope="col">Method</th>
+              <th scope="col">URL</th>
+              <th scope="col">Body</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Post</td>
+              <td><a href="#">/users</a></td>
+              <td>
+                <ol>
+                  <li>name <span class="text-primary">(required)</span></li>
+                  <li>email <span class="text-primary">(required)</span></li>
+                  <li>password <span class="text-primary">(required)</span></li>
+                </ol>
+              </td>
+              <td>Register to the system</td>
+            </tr>
+            <tr>
+              <td>Post</td>
+              <td><a href="#">/users/login</a></td>
+              <td>
+                <ol>
+                  <li>email <span class="text-primary">(required)</span></li>
+                  <li>password <span class="text-primary">(required)</span></li>
+                </ol>
+              </td>
+              <td>Login account <span class="text-primary">Must registered first</span></td>
+            </tr>
+            <tr>
+              <td>get</td>
+              <td><a href="#">/users/myInfo</a></td>
+              <td>
+                <ol>
+                  <li>email <span class="text-primary">(required)</span></li>
+                  <li>password <span class="text-primary">(required)</span></li>
+                </ol>
+              </td>
+              <td>show user details <span class="text-primary">Must registered first</span></td>
+            </tr>
+            <tr>
+              <td>get</td>
+              <td><a href="#">/users/usersList</a></td>
+              <td>
+                <ol>
+                  <li>email <span class="text-primary">(required)</span></li>
+                  <li>password <span class="text-primary">(required)</span></li>
+                </ol>
+              </td>
+              <td>show all users details<span class="text-primary"> must to be an admin</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+
+
+  
+  
+
+
+</body>
+
+</html>

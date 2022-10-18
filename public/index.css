@@ -1,0 +1,16 @@
+header{
+    min-height: 48px;
+    box-shadow: 0px 5px 15px 0px #000000;
+    background: rgb(38, 145, 187);
+}
+main{
+    min-height: 700px;
+}
+main h4{
+    font-weight: 200;
+}
+
+
+
+
+
